@@ -33,7 +33,7 @@ bot.on('text', async (ctx) => {
       let formData = `
 Страна: ${data[0][0].country}
 Заболело: ${data[0][0].cases}
-Выздоровело: ${[0][0].recovered}
+Выздоровело: ${data[0][0].recovered}
 Умерло: ${data[0][0].deaths}
 `;
       ctx.reply(formData);
@@ -46,7 +46,3 @@ bot.on('text', async (ctx) => {
 });
 
 bot.launch();
-
-// Enable graceful stop
-// process.once('SIGINT', () => bot.stop('SIGINT'));
-// process.once('SIGTERM', () => bot.stop('SIGTERM'));
