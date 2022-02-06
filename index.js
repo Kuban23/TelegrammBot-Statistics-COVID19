@@ -24,7 +24,7 @@ bot.start((ctx) => ctx.reply(`Привет, ${ctx.message.from.first_name}!
 
 bot.help((ctx) => ctx.reply(countries));
 
-// Пишем обработчик, чтобы пр написании текста осущ-ся запрос который бы получал данные
+// Пишем обработчик, чтобы при написании текста осущ-ся запрос который бы получал данные
 bot.on('text', async (ctx) => {
 
    try {
@@ -45,7 +45,6 @@ bot.on('text', async (ctx) => {
 
 });
 
-bot.hears('Hi', (ctx) => ctx.reply('Hey there'));
 bot.launch();
 
 // Enable graceful stop
